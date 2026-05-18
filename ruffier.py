@@ -32,9 +32,6 @@ def ruffier_result(r_index, level):
    return 4 # we end up here if the index is less than all the intermediate levels, that is, the tested circle.
 
 def test(P1, P2, P3, age):
-   ''' this function can be used from outside the module for calculating the Ruffier index.
-   We return the ready texts that just need to be written in the necessary place
-   We use the constants used at the beginning of this module for texts. '''
    if age < 7:
        return (txt_index + "0", txt_nodata) # this is a mystery beyond this test
    else:
