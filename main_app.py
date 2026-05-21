@@ -196,7 +196,7 @@ class Result(Screen):
       self.outer.add_widget(self.instr)
       self.add_widget(self.outer)
       self.on_enter = self.before
-   def before(self):
+  def before(self):
       global name
       self.instr.text = name + '\n' + test(p1, p2, p3, age)
 class HeartCheck(App):
