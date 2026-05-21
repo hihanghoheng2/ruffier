@@ -8,7 +8,7 @@ txt_test1 = '''Count the pulse for 15 seconds.\n
 Enter the result into the appropriate field.'''
 txt_test2 = '''Perform 30 squats in 45 seconds.\n
 Click the "Start" button to start the squat counter.\n
-Do squats at the speed of the counter."'
+Do squats at the speed of the counter."'''
 txt_test3 = '''Count the pulse twice within a minute:\n
 for the first 15 seconds of a single minute, then for the last 15 seconds of that minute.\n
 Enter the results into the appropriate fields.'''
