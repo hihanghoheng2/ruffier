@@ -9,7 +9,6 @@ from kivy.uix.scrollview import ScrollView
 from instructions import txt_instruction, txt_test1, txt_test2, txt_test3, txt_sits
 from ruffier import test
 
-
 from seconds import Seconds
 age = 7
 name = ""
@@ -20,7 +19,6 @@ def check_int(str_num):
        return int(str_num)
    except:
        return False
-
 
 class InstrScr(Screen):
   def __init__(self, **kwargs):
@@ -80,13 +78,11 @@ class PulseScr(Screen):
       outer.add_widget(self.btn)
       self.add_widget(outer)
 
-
   def sec_finished(self, *args):
       self.next_screen = True
       self.in_result.set_disabled(False)
       self.btn.set_disabled(False)
       self.btn.text = 'Continue'
-
 
   def next(self):
       if not self.next_screen:
@@ -100,7 +96,6 @@ class PulseScr(Screen):
               self.in_result.text = str(p1)
           else:
               self.manager.current = 'sits'
-
 
 class CheckSits(Screen):
   def __init__(self, **kwargs):
@@ -117,8 +112,6 @@ class CheckSits(Screen):
 class PulseScr2(Screen):
   def __init__(self, **kwargs):
       self.next_screen = False
-
-
       self.stage = 0
       super().__init__(**kwargs)
       instr = Label(text=txt_test3)
@@ -126,8 +119,6 @@ class PulseScr2(Screen):
       self.lbl_sec = Seconds(15)
       self.lbl_sec.bind(done=self.sec_finished)
       self.lbl1 = Label(text='Count your pulse')
-
-
       lbl_result1 = Label(text='Result:', halign='right')
       self.in_result1 = TextInput(text='0', multiline=False)
       line1.add_widget(lbl_result1)
@@ -135,8 +126,6 @@ class PulseScr2(Screen):
       line2 = BoxLayout(size_hint=(0.8, None), height='30sp')
       lbl_result2 = Label(text='Result after rest:', halign='right')
       self.in_result2 = TextInput(text='0', multiline=False)
-
-
       self.in_result1.set_disabled(True)
       self.in_result2.set_disabled(True)
       line2.add_widget(lbl_result2)
@@ -151,7 +140,6 @@ class PulseScr2(Screen):
       outer.add_widget(line2)
       outer.add_widget(self.btn)
       self.add_widget(outer)
-
 
   def sec_finished(self, *args):
      if self.lbl_sec.done:
@@ -210,6 +198,3 @@ class HeartCheck(App):
       return sm
 app = HeartCheck()
 app.run()
-
-
-
